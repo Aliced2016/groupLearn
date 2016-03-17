@@ -143,7 +143,8 @@ import java.util.Iterator;
                         SelectionKey key = (SelectionKey) selectorKeys.next();  
                         System.out.println("key.channel:"+key.channel());
                         //然后将它从返回键队列中删除     
-                        selectorKeys.remove();  
+//                        selectorKeys.remove();  
+                        this.selector.selectedKeys().remove(key);  
                         if (!key.isValid()) { // 选择键无效  
                             continue;  
                         }  
