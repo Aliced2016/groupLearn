@@ -141,7 +141,7 @@ import java.util.Iterator;
                         System.out.println("running2 ... ");  
                         //这里找到当前的选择键     
                         SelectionKey key = (SelectionKey) selectorKeys.next();  
-                        System.out.println("当前key.channel:"+key.channel());
+                        System.out.println("key.channel:"+key.channel());
                         //然后将它从返回键队列中删除     
                         selectorKeys.remove();  
                         if (!key.isValid()) { // 选择键无效  
